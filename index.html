@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="x-icon" href="42a433256f6a.png" />
+    <title>Project 1</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="myPage">
+    <div class="navbar">
+      <div class="logo">
+        <img src="42a433256f6a.png" width="35px" alt="Logo" />
+        <span class="logoPrimary">N</span>isaan
+        <span class="logoPrimary">V</span>ehicles
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul class="menu">
+        <li><a class="active" href="#myPage">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </div>
+
+    <div class="imageContainer" id="home">
+      <img
+        src="nissan-unveils-the-all-new-2025-kicks-offers-new-engine-v0-mhzzjtq8mwpc1.jpg"
+        width="100%"
+        alt="Nissan Kicks"
+      />
+      <div>
+        <p class="caption LC">By Your Side...</p>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section">
+      <h2 class="section-title">About Nissan</h2>
+      <div class="section">
+        <div class="container-about">
+          <div class="content-section">
+            <div class="content">
+              <p>
+                Nissan has a long history of innovation and excellence in the
+                automotive industry. Founded in 1933, Nissan has been at the
+                forefront of developing groundbreaking vehicles that combine
+                performance, technology, and design.
+              </p>
+              <div class="button">
+                <a href="">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="image-section">
+            <img src="images.jfif" width="100%" alt="Nissan" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="details" class="section">
+      <h2 class="section-title">DETAILS!</h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="classpic">
+            <img src="pic1.png" alt="Image 1" />
+          </div>
+          <div class="card-content">
+            <h3>Nissan GT-R</h3>
+            <p>PRICE: $213,775</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="classpic">
+            <img src="pic2.png" alt="Image 2" />
+          </div>
+          <div class="card-content">
+            <h3>Nissan Sentra</h3>
+            <p>PRICE: $113,540</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="classpic">
+            <img src="pic3.png" alt="Image 3" />
+          </div>
+          <div class="card-content">
+            <h3>Nissan Rogue</h3>
+            <p>PRICE: $24,300</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Section -->
+    <div id="login" class="section">
+      <h2 class="section-title">LOGIN!</h2>
+      <div id="login" class="section">
+        <form class="login-form" action="#">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+          <label for="birthdate">Birthdate:</label>
+          <input type="date" id="birthdate" name="birthdate" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-item">
+          <img src="location.jpg" alt="Location Icon" class="footer-icon" />
+          <span>Geesthachter Straße 136 C, 21502, Deutschland</span>
+        </div>
+        <div class="footer-item">
+          <img src="call.jpg" alt="Phone Icon" class="footer-icon" />
+          <span>+49 176-83635728</span>
+        </div>
+        <div class="footer-item">
+          <img src="mail.jpg" alt="Email Icon" class="footer-icon" />
+          <span>zeinaalshal@gmail.com</span>
+        </div>
+        <div class="footer-credit">
+          <span>Designed by Zeina Alshall</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        const menu = document.querySelector(".menu");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
