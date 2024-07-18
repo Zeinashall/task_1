@@ -236,7 +236,7 @@ body {
 }
 
 .login-form button {
-  width: 22%;
+  width: 30%;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -245,7 +245,7 @@ body {
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 186x;
+  margin-left: 168px;
 }
 
 .login-form button:hover {
@@ -287,8 +287,11 @@ footer {
   font-size: 14px;
   color: #ccc;
 }
-/* Media Queries */
+
 @media (max-width: 768px) {
+  .login-form button {
+    margin-left: 120px;
+  }
   .container-about {
     flex-direction: column !important;
   }
@@ -329,8 +332,5 @@ footer {
 
   .caption {
     font-size: 35px;
-  }
-  .login-form button {
-    margin-left: 129px;
   }
 }
