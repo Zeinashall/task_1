@@ -71,6 +71,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 2px 2px #222;
+
 }
 .classpic {
   min-height: 200px;
@@ -83,7 +84,10 @@ body {
 .navbar ul.menu li a.active {
   color: white;
   border-radius: 5px;
+  transform: translateY(2px);
+  font-style: italic;
 }
+
 .button-home {
   padding: 10px 20px;
   font-size: 16px;
