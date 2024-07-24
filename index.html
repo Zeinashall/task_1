@@ -6,27 +6,32 @@
     <link rel="shortcut icon" type="x-icon" href="42a433256f6a.png" />
     <title>Project 1</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="navbar">
-      <a href="index.html" class="logo">
-        <img src="42a433256f6a.png" width="35px" alt="Logo" />
-        <span class="logo-primary">N</span>issan
-        <span class="logo-primary">V</span>ehicles
-      </a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <ul class="menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#details">Details</a></li>
-        <li><a href="#login">Login</a></li>
-      </ul>
+    <div class="nav-container">
+      <div class="container">
+        <div class="navbar">
+          <a href="index.html" class="logo">
+            <img src="42a433256f6a.png" width="35px" alt="Logo" />
+            <span class="logo-primary">N</span>issan
+            <span class="logo-primary">V</span>ehicles
+          </a>
+          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+          <ul class="menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#details">Details</a></li>
+            <li><a href="#login">Login</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-
     <div class="imagecontainer" id="home">
       <img src="nissan-unveils.jpg" width="100%" alt="Nissan Kicks" />
-      <div>
+      <div class="container">
         <p class="caption">By Your Side...</p>
       </div>
     </div>
@@ -146,7 +151,7 @@
         </div>
       </div>
     </footer>
-    
+
     <script>
       function toggleMenu() {
         const menu = document.querySelector(".menu");
