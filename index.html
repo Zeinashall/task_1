@@ -10,27 +10,54 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      .button-alone {
+        background-color: rgb(134, 6, 6);
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-align: center;
+      }
+
+      .button-alone:hover {
+        background-color: #bb4355;
+      }
+    </style>
   </head>
   <body>
     <div class="nav-container">
       <div class="container">
         <div class="navbar">
-          <a href="index.html" class="logo">
-            <img src="42a433256f6a.png" width="35px" alt="Logo" />
+          <a href="#" class="logo">
+            <img src="icon12.png" width="35px" alt="Logo" />
             <span class="logo-primary">N</span>issan
             <span class="logo-primary">V</span>ehicles
           </a>
-          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-          <ul class="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#details">Details</a></li>
-            <li><a href="#login">Login</a></li>
-          </ul>
+          <!-- <button class="menu-toggle" onclick="toggleMenu()">☰</button> -->
+          <div class="mobile-menu">
+            <div class="burger-menu menu-toggle" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+            </div>
+            <ul class="menu">
+              <li><a href="#about">About</a></li>
+              <li><a href="#details">Details</a></li>
+              <li><a href="#login">Login</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <div class="imagecontainer" id="home">
-      <img src="nissan-unveils.jpg" width="100%" alt="Nissan Kicks" />
+      <img src="nissan-kicks.webp" width="100%" alt="Nissan Kicks" />
       <div class="container">
         <p class="caption">By Your Side...</p>
       </div>
@@ -51,22 +78,7 @@
                   performance, technology, and design.
                 </p>
                 <div class="button-readmore">
-                  <button
-                    type="submit"
-                    style="
-                      background-color: rgb(134, 6, 6);
-                      padding: 10px;
-                      border: none;
-                      border-radius: 5px;
-                      color: white;
-                      font-size: 12px;
-                      cursor: pointer;
-                      transition: background-color 0.3s ease;
-                      text-align: center;
-                    "
-                  >
-                    Read more
-                  </button>
+                  <button class="button-alone" type="submit">Read more</button>
                 </div>
               </div>
             </div>
@@ -85,7 +97,7 @@
         <div class="card-container">
           <div class="card">
             <div class="classpic">
-              <img src="pic1.png" alt="Image 1" />
+              <img src="nissan-kick.webp" alt="Image 1" />
             </div>
             <div class="card-content">
               <h3>Nissan GT-R</h3>
@@ -95,7 +107,7 @@
 
           <div class="card">
             <div class="classpic">
-              <img src="pic2.png" alt="Image 2" />
+              <img src="nissan2.webp" alt="Image 2" />
             </div>
             <div class="card-content">
               <h3>Nissan Sentra</h3>
@@ -105,7 +117,7 @@
 
           <div class="card">
             <div class="classpic">
-              <img src="pic3.png" alt="Image 3" />
+              <img src="nissan3.webp" alt="Image 3" />
             </div>
             <div class="card-content">
               <h3>Nissan Rogue</h3>
@@ -154,9 +166,23 @@
 
     <script>
       function toggleMenu() {
-        const menu = document.querySelector(".menu");
+        var menu = document.querySelector(".navbar ul.menu");
         menu.classList.toggle("active");
       }
+
+      document.querySelectorAll(".menu a").forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href").substring(1);
+          const targetElement = document.getElementById(targetId);
+
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          });
+        });
+      });
     </script>
   </body>
 </html>
